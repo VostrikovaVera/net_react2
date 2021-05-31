@@ -1,4 +1,6 @@
 .RegistrationForm {
-    height: 600px;
-    background-color: #cccccc;
+    margin-bottom: 25px;
+    padding: 50px 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
 }
