@@ -1,6 +1,22 @@
 .RegistrationForm {
     margin-bottom: 25px;
-    padding: 50px 20px;
+    padding: 40px 20px;
+    text-align: center;
     border: 1px solid #ccc;
     border-radius: 4px;
+    background-color: #fff;
+}
+
+.RegistrationForm h3 {
+    margin-bottom: 40px;
+}
+
+.RegistrationForm-btns {
+    margin-top: 40px;
+}
+
+.RegistrationForm-btns button:last-child {
+    background-color: transparent;
+    color: #636363;
+    margin-top: 15px;
 }

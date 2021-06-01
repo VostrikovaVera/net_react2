@@ -17,10 +17,12 @@ export const ParticipantCard = props => {
     }
 
     return (
-        <div className="UserCard">
-            <p>ID: <span>{id}</span></p>
-            <p>Name: <span>{`${firstName} ${lastName}`}</span></p>
-            <p>Time: <span>{convertTime(time)}</span></p>
+        <div className="ParticipantCard">
+            <div className="ParticipantCard-content">
+                <p>ID: <span>{id}</span></p>
+                <p>Name: <span>{`${firstName} ${lastName}`}</span></p>
+                <p>Time: <span>{convertTime(time)}</span></p>
+            </div>
 
             {contestStatus === "active" && <Button text="Delete" onClick={onDelete} />}
         </div>

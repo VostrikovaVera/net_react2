@@ -1,37 +1,35 @@
-/*.App {
-    text-align: center;
-}
-
-.App-container {
-    width: 1280px;
-    max-width: 1280px;
-    margin: 0 auto;
-    padding: 0 25px 25px;
-}
-
-.App-container::after {
+.ContestDashboard::after {
     content: '';
     display: block;
     clear: both;
 }
 
-.App-content-left {
+.ContestDashboard-content-left {
     width: 67%;
     float: left;
 }
 
-.App-content-right {
+.ContestDashboard-content-right {
     width: 28%;
     float: right;
+    padding-top: 75px;
 }
 
-.App-users-container {
+.ContestDashboard-header {
+    padding: 75px 0 80px;
+}
+
+.ContestDashboard-header input {
+    width: 515px;
+}
+
+.ContestDashboard-users-container {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
 }
 
-.App-users-container::after {
+.ContestDashboard-users-container::after {
     flex: auto;
     content: "";
-}*/
+}

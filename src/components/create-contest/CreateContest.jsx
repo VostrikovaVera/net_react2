@@ -1,7 +1,10 @@
 import React, {useState} from "react";
+import './CreateContest.css';
 import {useDispatch} from "react-redux";
 import {useHistory} from "react-router-dom";
 import { v4 as uuidv4 } from 'uuid';
+import {Button} from "../button/Button";
+import {Input} from "../input/Input";
 
 function CreateContest() {
     const history = useHistory();
@@ -30,15 +33,18 @@ function CreateContest() {
 
     return (
         <div className="CreateContest">
+            <h2>Create contest</h2>
             <form onSubmit={handleSave}>
-                <input
-                    name="contestName"
-                    type="text"
-                    placeholder="Enter contest name"
-                    value={contestData.name}
-                    onChange={handleChangeName}
-                />
-                <button type="submit">Create</button>
+                <div className="CreateContest-form">
+                    <label htmlFor="contestName">Contest name</label>
+                    <Input
+                        name="contestName"
+                        placeholder="Enter contest name"
+                        value={contestData.name}
+                        onChange={handleChangeName}
+                    />
+                    <Button type="submit" text="Create" />
+                </div>
             </form>
         </div>
     );

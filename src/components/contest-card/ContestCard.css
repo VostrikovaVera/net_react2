@@ -1,4 +1,9 @@
 .ContestCard {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
     width: 26.5%;
     margin-bottom: 60px;
     margin-right: 5%;
@@ -14,12 +19,20 @@
     margin-right: 0;
 }
 
+.ContestCard-content {
+    margin-bottom: 20px;
+}
+
 .ContestCard p {
     margin: 4px;
-    padding: 0;
+    padding-bottom: 7px;
     color: #636363;
 }
 
 .ContestCard p span {
     font-weight: 600;
+}
+
+.ContestCard-link:hover {
+    background-color: #dbdbdb;
 }

@@ -1,4 +1,11 @@
 .WinnerInfo {
-    border: 1px solid #cccccc;
+    padding: 50px 20px;
+    text-align: center;
+    border: 1px solid #ccc;
     border-radius: 4px;
+    background-color: #fff;
+}
+
+.WinnerInfo p span {
+    font-weight: 600;
 }

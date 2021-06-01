@@ -1,4 +1,9 @@
-.UserCard {
+.ParticipantCard {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
     width: 26.5%;
     margin-bottom: 60px;
     margin-right: 5%;
@@ -10,16 +15,20 @@
     box-shadow: 3px 3px 19px 1px rgba(219,216,219,1);
 }
 
-.UserCard:nth-child(3n) {
+.ParticipantCard:nth-child(3n) {
     margin-right: 0;
 }
 
-.UserCard p {
+.ParticipantCard-content {
+    margin-bottom: 20px;
+}
+
+.ParticipantCard p {
     margin: 4px;
-    padding: 0;
+    padding-bottom: 7px;
     color: #636363;
 }
 
-.UserCard p span {
+.ParticipantCard p span {
     font-weight: 600;
 }

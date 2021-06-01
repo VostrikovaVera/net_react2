@@ -1,6 +1,7 @@
 import * as React from "react";
 import './ContestCard.css';
 import {Link} from "react-router-dom";
+import {Button} from "../button/Button";
 
 export const ContestCard = props => {
     const {contests} = props;
@@ -8,14 +9,18 @@ export const ContestCard = props => {
 
     return (
         <div className="ContestCard">
-            <p>ID: <span>{id}</span></p>
-            <p>Name: <span>{name}</span></p>
-            <p>Status: <span>{status}</span></p>
-            {winner && (
-                <p>Winner: <span>{`${winner.firstName} ${winner.lastName}`}</span></p>
-            )}
+            <div className="ContestCard-content">
+                <p>ID: <span>{id}</span></p>
+                <p>Name: <span>{name}</span></p>
+                <p>Status: <span>{status}</span></p>
+                {winner && (
+                    <p>Winner: <span>{`${winner.firstName} ${winner.lastName}`}</span></p>
+                )}
+            </div>
 
-            <Link to={`/${id}`}>Show</Link>
+            <Link to={`/${id}`} className="ContestCard-link">
+                <Button text="Show" />
+            </Link>
         </div>
     )
 }

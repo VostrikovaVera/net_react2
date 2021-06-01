@@ -1,37 +1,6 @@
 .App {
-  text-align: center;
-}
-
-.App-container {
   width: 1280px;
   max-width: 1280px;
   margin: 0 auto;
-  padding: 0 25px 25px;
-}
-
-.App-container::after {
-  content: '';
-  display: block;
-  clear: both;
-}
-
-.App-content-left {
-  width: 67%;
-  float: left;
-}
-
-.App-content-right {
-  width: 28%;
-  float: right;
-}
-
-.App-users-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-}
-
-.App-users-container::after {
-  flex: auto;
-  content: "";
+  padding: 25px;
 }

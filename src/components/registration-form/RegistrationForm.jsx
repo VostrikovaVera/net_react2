@@ -4,6 +4,8 @@ import {useDispatch} from "react-redux";
 import {useState} from "react";
 import {convertTime} from "../../helpers";
 import {v4 as uuidv4} from 'uuid';
+import {Button} from "../button/Button";
+import {Input} from "../input/Input";
 
 export const RegistrationForm = ({contestId}) => {
     const dispatch = useDispatch();
@@ -72,12 +74,11 @@ export const RegistrationForm = ({contestId}) => {
     return (
         <div className="RegistrationForm">
             {!isRegistered ? (
-                <div>
+                <>
                     <h3>New participant</h3>
                     <form onSubmit={handleRegister}>
-                        <input
+                        <Input
                             name="firstName"
-                            type="text"
                             placeholder="Enter first name..."
                             value={participantData.firstName}
                             onChange={(e) => {
@@ -87,9 +88,8 @@ export const RegistrationForm = ({contestId}) => {
                                 })
                             }}
                         />
-                        <input
+                        <Input
                             name="lastName"
-                            type="text"
                             placeholder="Enter last name..."
                             value={participantData.lastName}
                             onChange={(e) => {
@@ -99,25 +99,26 @@ export const RegistrationForm = ({contestId}) => {
                                 })
                             }}
                         />
-                        <button type="submit">Register</button>
+                        <Button type="submit" text="Register" />
                     </form>
-                </div>
+                </>
             ) : (
-                <div>
+                <>
                     <h3>Participant {participantData.name}</h3>
                     <form onSubmit={handleSave}>
-                        <input
+                        <Input
                             name="time"
-                            type="text"
                             placeholder="Enter time in seconds..."
                             value={participantData.time}
                             onChange={handleChangeTime}
                         />
                         <h3>Time: {convertTime(participantData.time)}</h3>
-                        <button type="submit">Save</button>
-                        <button onClick={handleCancel} type="button">Cancel</button>
+                        <div className="RegistrationForm-btns">
+                            <Button type="submit" text="Save" />
+                            <Button text="Cancel" onClick={handleCancel} />
+                        </div>
                     </form>
-                </div>
+                </>
             )}
         </div>
     )

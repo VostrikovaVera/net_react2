@@ -1,10 +1,15 @@
 .Input {
     width: 200px;
     height: 48px;
+    margin-bottom: 20px;
     border: 1px solid #dbdbdb;
     outline: none;
     -webkit-appearance: none;
     padding: 0 20px;
-    border-radius: 4px 0 0 4px;
+    border-radius: 4px;
     font-size: 16px;
+}
+
+.Input:last-child {
+    margin-bottom: 0;
 }

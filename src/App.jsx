@@ -11,13 +11,15 @@ import CreateContest from "./components/create-contest/CreateContest";
 
 function App() {
   return (
-    <Router>
-      <Switch>
-        <Route exact path="/" component={Home} />
-        <Route path="/create" component={CreateContest} />
-        <Route path="/:id" component={ContestDashboard} />
-      </Switch>
-    </Router>
+      <div className="App">
+          <Router>
+            <Switch>
+              <Route exact path="/" component={Home} />
+              <Route path="/create" component={CreateContest} />
+              <Route path="/:id" component={ContestDashboard} />
+            </Switch>
+          </Router>
+      </div>
   );
 }
 
